@@ -1,23 +1,36 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; 
 
 function Header(){
+    const navigate = useNavigate();
+     const handleClick = () =>{
+    navigate("/Homepage"); 
+    };
+     const handleClick2 = () =>{
+    navigate("/Loginpage"); 
+    };
     return(
         <>
-        <div style={{position:'fixed',top:'0',backgroundColor: 'yellow',width: '100%',top: 0,left: 0,right: 0,}}>
-       <ul style={{ display: "flex",listStyle:'none',gap:'200px',width:'100%'}}>
-        <li>home</li>
-        <li>home2</li>
-        <li>home4</li>
-        <li>home5</li>
-        <li>home6</li>
-       </ul>
+        <div style={{backgroundImage: `url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d.jpg')`, backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "100vh",}}>
+             <div style={{ display: 'flex',height:'40px',fontSize:'20px',justifyContent: 'space-around', backgroundColor: '#f0f0f0', padding: '10px' }}>
+        <div style={{ marginRight:'280px'}}>Future UI</div>
+        <div  onClick={handleClick}>Home</div>
+        <div>Pages</div>
+        <div>Portfolio</div>
+        <div onClick={handleClick2}>Logout</div>
+      </div>
+
+        <div style={{ paddingTop:'20px',paddingBottom:'20px',paddingLeft:'10px',alignItems: 'flex-start',backgroundColor: '#ADD8E6',width: '11%',marginTop:'0px',display: 'flex',
+  flexDirection: 'column',
+  gap: '65px'}}>
+      <div>Dashboard</div>
+       <div>Charts</div>
+        <div>Tables</div>
+         <div>Report</div>
+          <div>Setup</div>
         </div>
-        <div style={{backgroundColor: 'yellow',width: '50%',justifyContent:'center',textAlign:'center',marginTop:'80px'}}>
-       <ul style={{ listStyle:'none',gap:'200px',width:'50%'}}>
-        <li>home</li>
-        <li>home2</li>
-        
-       </ul>
         </div>
         </>
     );
