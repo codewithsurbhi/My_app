@@ -1,4 +1,5 @@
 import React from "react";
+import './Loginpage.css';
 function Loginpage(){
     return(
         <>
@@ -7,7 +8,7 @@ function Loginpage(){
            <form>
             <input type="email" placeholder="Email"/><br/>
             <input type="password" placeholder="password"/><br/>
-            <button>Submit</button>
+            <button className='loginbutton' style={{border:'1px'}}>Submit</button>
            
            </form>
         </div>

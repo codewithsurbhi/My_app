@@ -12,7 +12,7 @@ function Header(){
         <li>home6</li>
        </ul>
         </div>
-        <div style={{backgroundColor: 'yellow',width: '50%',justifyContent:'center',textAlign:'center',display:'flex',marginTop:'80px'}}>
+        <div style={{backgroundColor: 'yellow',width: '50%',justifyContent:'center',textAlign:'center',marginTop:'80px'}}>
        <ul style={{ listStyle:'none',gap:'200px',width:'50%'}}>
         <li>home</li>
         <li>home2</li>
