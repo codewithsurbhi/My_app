@@ -1,7 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
+import im from "../assets/nw.jpg";
+
 
 function Header(){
+const styles={
+  background:{
+  backgroundImage: `url(${im})`,   // <-- the image
+      backgroundSize: "cover",         // fill the area
+      backgroundPosition: "center",    // centre the image
+      backgroundRepeat: "no-repeat",   // no tiling
+      minHeight: "100vh",              // optional – make it full-screen
+      padding: "20px",
+}}
     const navigate = useNavigate();
      const handleClick = () =>{
     navigate("/Homepage"); 
@@ -11,9 +22,7 @@ function Header(){
     };
     return(
         <>
-        <div style={{backgroundImage: `url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d.jpg')`, backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: "100vh",}}>
+        <div style={styles.background}>
              <div style={{ display: 'flex',height:'40px',fontSize:'20px',justifyContent: 'space-around', backgroundColor: '#f0f0f0', padding: '10px' }}>
         <div style={{ marginRight:'280px'}}>Future UI</div>
         <div  onClick={handleClick}>Home</div>

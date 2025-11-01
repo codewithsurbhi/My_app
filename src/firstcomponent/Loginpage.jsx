@@ -1,6 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import './Loginpage.css';
+import sign from "../assets/pr_sign.png";
+
+
 function Loginpage(){
      const navigate = useNavigate();
      const handleClick = () =>{
@@ -11,6 +14,7 @@ function Loginpage(){
         <>
         <div>
             <p>LoginPage</p>
+            <p><img src={sign} alt="" /></p>
            <form>
             <input type="email" placeholder="Email"/><br/>
             <input type="password" placeholder="password"/><br/>
