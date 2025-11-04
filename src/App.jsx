@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Loginpage from './firstcomponent/Loginpage';
 import Homepage from './firstcomponent/Homepage';
 import Header from './firstcomponent/Header';
-import './App.css'
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 function App() {
   
