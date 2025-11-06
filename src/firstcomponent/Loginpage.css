@@ -1,3 +1,21 @@
 .loginbutton{
     background-color: rgb(16, 211, 211);
 }
+.nav-link {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  color: #fff;
+  background-color: rgba(42, 202, 90, 0.15);
+  border-radius: 4px;
+}
+.hoverr:hover{
+    color:rgb(235, 209, 123);
+}

@@ -6,11 +6,11 @@ import im from "../assets/nw.jpg";
 function Header(){
 const styles={
   background:{
-  backgroundImage: `url(${im})`,   // <-- the image
-      backgroundSize: "cover",         // fill the area
-      backgroundPosition: "center",    // centre the image
-      backgroundRepeat: "no-repeat",   // no tiling
-      minHeight: "100vh",              // optional – make it full-screen
+  backgroundImage: `url(${im})`,   
+      backgroundSize: "cover",        
+      backgroundPosition: "center",    
+      backgroundRepeat: "no-repeat",   
+      minHeight: "100vh",              
       padding: "20px",
 }}
     const navigate = useNavigate();
