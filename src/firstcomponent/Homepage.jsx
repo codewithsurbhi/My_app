@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ss from "../assets/banner1.jpg";
+import ed from "../assets/education1.jpg";
 import lg from "../assets/sslogo.jpg";
 import './Loginpage.css';
+import Card from "../firstcomponent/Card";
 
 
 function Homepage() {
@@ -23,6 +25,34 @@ function Homepage() {
     borderRadius: '8px',
     color: hovered === id ? 'red' : 'blue',
   });
+  
+  const cardsData = [
+    {
+      image: "ed",
+      title: "Education",
+      description: "B.Tech",
+      buttonText: "Read More",
+      
+    },
+    {
+      title: "Skills",
+      description: "React.js",
+      buttonText: "See All",
+      
+    },
+    {
+      title: "Experience",
+      description: "Frontend Developer",
+      buttonText: "Read More",
+    
+    },
+    {
+      title: "Contact",
+      description: "Email",
+      buttonText: "Read More",
+    
+    }
+  ];
   return (
     <>
     <div style={styles.background}>
@@ -37,10 +67,10 @@ function Homepage() {
             <div className="col-6">
               <div>
               <ul className="nav d-flex justify-content-around align-items-center m-0 p-0">
-                <li className="nav-link"> Education</li>
-                 <li className="hoverr"> Skills</li>
-                 <li  style={{ color: 'blue', fontWeight: '600', paddingLeft: '10px', fontSize: '20px' }}> Work Experience</li>
-                 <li> Contact</li>
+                <li className="nav-link"style={{ color: 'blue', fontWeight: '600', paddingLeft: '10px', fontSize: '15px' }}> Education</li>
+                 <li className="nav-link"style={{ color: 'blue', fontWeight: '600', paddingLeft: '10px', fontSize: '15px' }}> Skills</li>
+                 <li  className="nav-link" style={{ color: 'blue', fontWeight: '600', paddingLeft: '10px', fontSize: '15px' }}> Work Experience</li>
+                 <li className="nav-link" style={{ color: 'blue', fontWeight: '600', paddingLeft: '10px', fontSize: '15px' }}> Contact</li>
                  
               </ul>
               </div>
@@ -56,6 +86,24 @@ function Homepage() {
           </div>
         </div>
       </section>
+      <section>
+        <div style={{height:'100px'}}>fsdgdg</div>
+      </section>
+      <section className="container my-5">
+          <div className="row justify-content-center">
+            {cardsData.map((card, index) => (
+              <div className="col-12 col-md-6 col-lg-3" key={index}>
+                <Card
+                  title={card.title}
+                  description={card.description}
+                  image={card.image}
+                  buttonText={card.buttonText}
+                  onClick={card.onClick}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
 
 
