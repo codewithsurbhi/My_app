@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import Loginpage from './firstcomponent/Loginpage';
 import Homepage from './firstcomponent/Homepage';
 import Header from './firstcomponent/Header';
+import About from './firstcomponent/About';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Route path="/Homepage" element={<Homepage />} />
         <Route path="/header" element={<Header />} />
           <Route path="/Loginpage" element={<Loginpage />} />
+          <Route path="/About" element={<About />} />
       </Routes>
     </Router>
   );
