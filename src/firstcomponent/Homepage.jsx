@@ -37,6 +37,13 @@ function Homepage() {
       block: "start",
     });
   };
+  const handleAboutClick1 =(e) => {
+    e.preventDefault();
+    document.getElementById("skill")?.scrollIntoView({
+      behaviour:"smooth",
+      block:"start",
+    })
+  };
 
   // ✔ Resume Upload Handler
   const handleResumeUpload = (e) => {
@@ -158,6 +165,7 @@ function Homepage() {
                         style={menuStyle("skills")}
                         onMouseEnter={() => setHovered("skills")}
                         onMouseLeave={() => setHovered(null)}
+                         onClick={handleAboutClick1}
                       >
                         Skills
                       </li>
@@ -301,6 +309,90 @@ function Homepage() {
                     I'm Surbhi Sharma, a Front-End Developer with 3.5 years of
                     experience in building fast and beautiful interfaces with
                     React.js, HTML, CSS, JavaScript & Tailwind CSS.
+                  </h4>
+                </div>
+              </div>
+            </section>
+
+            {/* JOKE BLOCK */}
+            <div style={{ marginTop: "60px", color: "white", textAlign: "center" }}>
+              <h2 style={{ fontSize: "32px" }}>😄 Random Joke</h2>
+
+              {joke ? (
+                <>
+                  <p style={{ fontSize: "22px", marginTop: "20px" }}>{joke.setup}</p>
+                  <p
+                    style={{
+                      fontSize: "26px",
+                      fontWeight: "bold",
+                      marginTop: "10px",
+                    }}
+                  >
+                    {joke.punchline}
+                  </p>
+                </>
+              ) : (
+                <p style={{ fontSize: "20px" }}>Loading joke...</p>
+              )}
+            </div>
+
+             
+
+            
+
+          </div>
+        </div>
+        <div
+          style={{
+            marginTop: "40px",
+            marginLeft: "80px",
+            marginRight: "80px",
+            marginBottom: "40px",
+            borderRadius: "20px",
+            backgroundImage: `url(${pg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            minHeight: "100vh",
+            padding: "20px",
+          }}
+        >
+          <div
+            style={{
+              marginTop: "-15px",
+              marginLeft: "-15px",
+              marginRight: "-15px",
+              marginBottom: "-15px",
+              borderRadius: "20px",
+              backgroundImage: `url(${black})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              minHeight: "100vh",
+              padding: "20px",
+            }}
+          >
+           
+
+
+             <section id="skills">
+              <div
+                style={{
+                  marginTop: "100px",
+                  paddingLeft: "80px",
+                  paddingRight: "80px",
+                }}
+                className="row align-items-center justify-content-center"
+              >
+                <div className="text-center">
+                  <h1 style={{ color: "#e0e0e0" }}>About Me</h1>
+                  <h4 style={{ color: "#d0d0d0", lineHeight: "1.6" }}>
+                   <ul><li>React</li>
+                   <li>Javascript</li>
+                   <li>HTML</li>
+                   <li>CSS</li>
+                   <li>JAVA</li>
+                   </ul>
                   </h4>
                 </div>
               </div>
